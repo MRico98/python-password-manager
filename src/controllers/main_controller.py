@@ -1,4 +1,5 @@
 from src.ui.main_window import MainWindow
+from src.ui.add_password_window import AddPasswordWindow
 
 class MainController:
     def __init__(self):
@@ -10,7 +11,7 @@ class MainController:
         self.app.set_view_passwords_handler(self._view_passwords)
 
     def _add_password(self):
-        print("Abriendo ventana para agregar contraseña...")
+        self.add_password_window = AddPasswordWindow(self.app)
 
     def _view_passwords(self):
         print("Abriendo lista de contraseñas...")
